@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>LiveFoot � Football Streaming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark-theme">
+  <div class="page">
+
+    <!-- Top bar -->
+    <header class="top-bar">
+      <div class="brand">
+        <div class="brand-badge">?</div>
+        <div class="brand-text">
+          <span class="brand-name">LiveFoot</span>
+          <span class="brand-sub">HD FOOTBALL STREAMS</span>
+        </div>
+      </div>
+
+      <nav class="nav-links">
+        <a class="nav-link" href="#live">Live</a>
+        <a class="nav-link" href="#schedule">Schedule</a>
+        <a class="nav-link" href="#leagues">Leagues</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="pill">
+          <span class="pill-dot"></span>
+          <span>Servers stable</span>
+        </div>
+        <button class="theme-toggle" id="themeToggle">?</button>
+        <button class="btn btn-primary">
+          <span>Sign In</span>
+          <span>?</span>
+        </button>
+        <button class="burger" id="burgerMenu"><span></span></button>
+      </div>
+    </header>
+
+    <!-- Main layout -->
+    <main class="layout">
+
+      <!-- LEFT SIDE -->
+      <section>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+          <div class="hero-inner">
+
+            <div class="hero-pill-row">
+              <div class="hero-badge"><span>Tonight � Champions League</span></div>
+              <div class="hero-meta"><span>4K � Multi-angle � No ads*</span></div>
+            </div>
+
+            <div>
+              <h1 class="hero-title">
+                Stream every <span>big match</span> in one place.
+              </h1>
+              <p class="hero-subtitle">
+                Live fixtures, instant replays and real-time stats. All your favourite leagues, on any device.
+              </p>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" id="ctaWatchNow">
+                <span>Watch live now</span> <span>?</span>
+              </button>
+              <button class="btn btn-ghost btn-secondary">
+                <span>Browse schedule</span> <span>??</span>
+              </button>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat">
+                <span class="stat-label">Live matches</span>
+                <span class="stat-value">7 <span>right now</span></span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Leagues covered</span>
+                <span class="stat-value">18 <span>worldwide</span></span>
+              </div>
+              <div class="stat">
+                <span class="stat-label">Latency</span>
+                <span class="stat-value">2s <span>avg delay</span></span>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- FEATURED MATCH -->
+        <section class="featured">
+          <div class="featured-left">
+
+            <div class="featured-league">
+              <span>UEFA Champions League</span>
+              <span class="divider-dot"></span>
+              <span>Match of the night</span>
+              <span class="tag-live">
+                <span class="tag-live-dot"></span> LIVE
+              </span>
+            </div>
+
+            <div class="featured-match-row">
+              <div class="team-pill">
+                <div class="team-logo">MC</div>
+                <div class="team-name">
+                  <span>Man. City</span> <span>Home</span>
+                </div>
+              </div>
+
+              <div class="featured-score-box">
+                <div class="featured-score">2-1</div>
+                <div class="featured-minute">63'</div>
+              </div>
+
+              <div class="team-pill">
+                <div class="team-logo team-logo-alt">RM</div>
+                <div class="team-name">
+                  <span>Real Madrid</span> <span>Away</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="featured-meta-row">
+              <div class="pill-soft">?? <strong>Etihad Stadium</strong></div>
+              <div class="pill-soft">??? <strong>EN / ES commentary</strong></div>
+              <div class="pill-soft">?? <strong>Multi-angle � 4K</strong></div>
+            </div>
+
+          </div>
+
+          <div class="featured-right">
+            <div class="pitch-card">
+              <div class="pitch">
+                <div class="pitch-line"></div>
+                <div class="pitch-circle"></div>
+                <div class="pitch-ball"></div>
+
+                <div class="pitch-labels">
+                  <span>High press</span>
+                  <span>Counter attack</span>
+                </div>
+
+              </div>
+              <div class="pitch-footer">
+                <span>Expected goals: <span>2.8 vs 1.9</span></span>
+                <span>Possession: <span>61% - 39%</span></span>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- LIVE PLAYER -->
+        <section id="live" class="player-card">
+          <div class="player-header">
+            <div class="player-title-wrap">
+              <h2 class="player-title" id="playerTitle">Live match player</h2>
+              <p class="player-sub" id="playerSubtitle">Select a match to start streaming.</p>
+            </div>
+
+            <div class="player-pills">
+              <div class="pill">HDR ready</div>
+              <div class="pill">Multi-language audio</div>
+            </div>
+          </div>
+
+          <div class="player-screen">
+
+            <div class="player-video">
+              <div class="player-overlay"></div>
+
+              <div class="player-info-row">
+                <div class="player-info-tags">
+                  <span id="playerBadge"><strong>Live</strong> � Match centre</span>
+                  <span id="playerMeta">Kick-off in � : �</span>
+                </div>
+
+                <div class="player-info-score" id="playerScoreBox">
+                  <span class="player-score-main" id="playerScore">- : -</span>
+                  <span id="playerTime">�'</span>
+                </div>
+              </div>
+
+              <div class="player-info-teams" id="playerTeams">
+                <div class="player-info-team-box">
+                  <span>Home</span> <strong>�</strong>
+                </div>
+                <span class="player-info-vs">VS</span>
+                <div class="player-info-team-box">
+                  <span>Away</span> <strong>�</strong>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="player-controls">
+
+              <div class="player-controls-left">
+                <button class="player-main-btn" id="playerPlay">?</button>
+                <div class="player-timeline"><div class="player-timeline-fill"></div></div>
+                <span id="playerStatus">Ready</span>
+              </div>
+
+              <div class="player-controls-right">
+                <span>HD</span>
+                <div class="player-volume-bar"><div class="player-volume-fill"></div></div>
+                <span>?</span>
+                <span>?</span>
+              </div>
+
+            </div>
+
+          </div>
+        </section>
+
+        <!-- MATCH LIST -->
+        <section id="schedule">
+          <div class="section-header">
+            <div class="section-title-wrap">
+              <h2 class="section-title">Today�s matches</h2>
+              <p class="section-subtitle">Filter by league, live status or team name.</p>
+            </div>
+
+            <div class="filters">
+              <select class="filter-select" id="leagueFilter">
+                <option value="all">All leagues</option>
+                <option value="Premier League">Premier League</option>
+                <option value="La Liga">La Liga</option>
+                <option value="Serie A">Serie A</option>
+                <option value="Bundesliga">Bundesliga</option>
+                <option value="Ligue 1">Ligue 1</option>
+                <option value="Champions League">Champions League</option>
+              </select>
+
+              <input type="text" class="filter-input" id="searchFilter" placeholder="Search team" />
+
+              <button class="filter-toggle" id="liveOnlyToggle" data-active="false">
+                <div class="filter-toggle-dot"></div>
+                <span>Live only</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="matches-grid" data-matches></div>
+
+        </section>
+
+        <p class="footer-note">
+          *This is a front-end template. To stream real matches, embed only
+          <strong>legal</strong> sources and respect all broadcasting rights.
+        </p>
+
+      </section>
+
+      <!-- RIGHT SIDE PANEL -->
+      <aside class="side-panel" id="leagues">
+
+        <section class="today-card">
+          <div class="today-header">
+            <h2>Today�s spotlight</h2>
+            <span>All times local</span>
+          </div>
+
+          <div class="today-row" id="todayList"></div>
+        </section>
+
+        <section class="today-card">
+          <div class="today-header">
+            <h2>Leagues coverage</h2>
+            <span>Top tier football</span>
+          </div>
+
+          <div class="today-row">
+            <div class="today-item">
+              <div class="today-item-left">
+                <strong>Premier League</strong>
+                <span>England</span>
+              </div>
+              <div class="today-item-right">
+                <span>All 10 games / week</span>
+                <small>Replays � Highlights</small>
+              </div>
+            </div>
+
+            <div class="today-item">
+              <div class="today-item-left">
+                <strong>La Liga</strong>
+                <span>Spain</span>
+              </div>
+              <div class="today-item-right">
+                <span>Every match live</span>
+                <small>ES / EN commentary</small>
+              </div>
+            </div>
+
+            <div class="today-item">
+              <div class="today-item-left">
+                <strong>UEFA UCL</strong>
+                <span>Champions League</span>
+              </div>
+              <div class="today-item-right">
+                <span>All matchdays</span>
+                <small>Multi-view � 4K*</small>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </aside>
+
+    </main>
+  </div>
+
+  <!-- Link to external JS file -->
+  <script src="script.js"></script>
+
+</body>
+</html>
+
